@@ -13,6 +13,7 @@
 :root{
     --bg-color: #081b29;
     --second-bg-color:#112e42;
+    --third-bg-color: #ffffff;
     --text-color: #ededed;
     --main-color: #00abf0;
 }
@@ -255,7 +256,7 @@ span{
     width: 15rem;
 }
 .btn-box.btns a::before{
-    background: var(--second-bg-color)
+    background: var(--second-bg-color);
 }
 .education{
     display:flex;
@@ -264,6 +265,7 @@ span{
     flex-direction: column;
     min-height: auto;
     padding-bottom: 5rem;
+    background: var(--second-bg-color);
 }
 .education .education-row{
     display: flex;
@@ -284,12 +286,36 @@ span{
     position:relative;
     padding: 2rem;
 }
+.education-box .education-content::before{
+    content: '';
+    position:absolute;
+    top:0;
+    left: -1.1rem;
+    width: 2rem;
+    height: 2rem;
+    background: var(--main-color);
+    border-radius: 50%;
+}
 .education-content .content{
     position:relative;
     padding: 1.5rem;
     border: .2rem solid var(--main-color);
     border-radius: .6rem;
     margin-bottom: 2rem;
+}
+.education-content .content::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width: 0%;
+    height: 100%;
+    background: var(--second-bg-color);
+    z-index:-1;
+    transition:0.5s;
+}
+.education-content .content:hover::before{
+    width: 100%;
 }
 
 .education-content .content .year{
@@ -307,3 +333,49 @@ span{
     font-size: 1.6rem;
     padding-top: .5rem;
 }
+
+.skills{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: auto;
+    padding-bottom: 8rem;
+    background: var(--bg-color);
+   
+}
+.skills h3{
+    padding-top: 4rem;
+    padding-bottom:3rem;
+    margin: 50 50 1.5rem 2rem;
+
+}
+
+.skills .skills-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap:5rem;
+}
+.skills .skills-content{
+    position:relative;
+    padding: 2rem;
+    border: .2rem solid var(--main-color);
+    border-radius: .6rem;
+    margin-bottom: 2rem;
+    vertical-align: middle;
+
+}
+.skills-content .languages{
+    font-size: 1.5rem;
+    padding: .5rem;
+    color: var(--text-color);
+    vertical-align: middle;
+
+}
+.skills-content .languages i{
+    padding-right: .5rem;
+    font-size: 5rem;
+    align-items: center;
+    color:var(--main-color);
+}
+
