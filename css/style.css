@@ -284,7 +284,7 @@ span{
 }
 .education-box .education-content{
     position:relative;
-    padding: 2rem;
+    padding-left: 2rem;
 }
 .education-box .education-content::before{
     content: '';
@@ -302,6 +302,7 @@ span{
     border: .2rem solid var(--main-color);
     border-radius: .6rem;
     margin-bottom: 2rem;
+    
 }
 .education-content .content::before{
     content:'';
@@ -312,7 +313,7 @@ span{
     height: 100%;
     background: var(--second-bg-color);
     z-index:-1;
-    transition:0.5s;
+    transition:2.5s;
 }
 .education-content .content:hover::before{
     width: 100%;
@@ -334,6 +335,7 @@ span{
     padding-top: .5rem;
 }
 
+
 .skills{
     display:flex;
     justify-content: center;
@@ -350,7 +352,6 @@ span{
     margin: 50 50 1.5rem 2rem;
 
 }
-
 .skills .skills-row{
     display: flex;
     flex-wrap: wrap;
@@ -362,15 +363,11 @@ span{
     border: .2rem solid var(--main-color);
     border-radius: .6rem;
     margin-bottom: 2rem;
-    vertical-align: middle;
-
 }
 .skills-content .languages{
     font-size: 1.5rem;
     padding: .5rem;
     color: var(--text-color);
-    vertical-align: middle;
-
 }
 .skills-content .languages i{
     padding-right: .5rem;
