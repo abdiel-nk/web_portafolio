@@ -193,7 +193,7 @@ section{
     transition: 3s;
 }
 .home-imgHover:hover{
-    background-color: var(--main-color);
+    background-color: var(--bg-color);
     opacity: 0.8;
 }
 .about{
@@ -376,3 +376,62 @@ span{
     color:var(--main-color);
 }
 
+.projects{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: auto;
+    padding-bottom: 5rem;
+    background: var(--bg-color);
+}
+.projects h2{
+    padding-top: 4rem;
+    padding-bottom:3rem;
+    margin: 50 50 1.5rem 2rem;
+}
+.projects .project-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap:5rem;
+}
+.project-row .project-column{
+    flex: 1 1 40rem;
+}
+.project-column .project-box{
+    display: block;
+    padding: 5rem;
+}
+.project-box .project-content{
+    position:relative;
+    padding-left: 2rem;
+}
+.project-content .content{
+    position:relative;
+    padding: 2rem;
+    align-items: center;
+    border: .2rem solid var(--main-color);
+    border-radius: .6rem;
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 10rem; 
+}
+.project-content  .content p{
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+.project-content .btn-box.btns{
+    justify-content: space-between;
+    width: 15rem;
+    height: 100%;
+    align-items: center;
+    font-size: 800;
+
+}
+.projects-content .project-img {
+    font-size: 1.5rem;
+}
+.project-content .project-img img{
+    height: 50vh;    
+    width: 100%;
+}
