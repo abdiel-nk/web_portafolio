@@ -23,7 +23,15 @@ sections.forEach(sec =>{
             links.classList.remove('active');
             document.querySelector('header nav a[href*='+ id +']').classList.add('active');
         });
+         // animation on scrol
+         sec.classList.add('show-animate');
     }
+    // else{
+    //     sec.classList.remove('show-animate');
+
+    // }
+    
+
 });
 //sticky menu
     let header = document.querySelector('header');
