@@ -509,6 +509,7 @@ span{
 }
 .contact h2{
     left: 50%;
+    color:white;
     display: inline-block;
     transform:translateX(-50%);
 }
@@ -659,21 +660,17 @@ section:nth-child(odd) .animate.scroll{
 .about.show-animate .animate.scroll,
 .education.show-animate .animate.scroll,
 .skills.show-animate .animate.scroll,
-.education.show-animate .education-box .animate.scroll,
+.education.show-animate  .animate.scroll,
+.contact.show-animate .animate.scroll,
 .projects.show-animate .animate.scroll,
-.contact.show-animate .animate-scroll,
+
 .footer.show-animate .animate.scroll{
     transition-delay: calc(.3s * var(--i));
     width: 0;
 }
 
 /* MediaQuery */
-/* @media(min-width:310px){
-    .contact .form.show-animate .animate.scroll{
-        transition-delay: calc(.3s * var(--i));
-        width: 0;
-    }
-} */
+
 @media(min-width: 1200px){
     .project-box .project-content{
         height: 80vh;
@@ -731,15 +728,8 @@ section:nth-child(odd) .animate.scroll{
     .projects .project-row{
         display: block;
     }
-    .contact.show-animate .form .animate.scroll{
-        transition-delay: calc(.3s * var(--i));
-        width: 0;
-    }
-    .contact.show-animate .animate.scroll{
-        transition:1s ease;
-        transition-delay:calc(.3s / var(--i));
-        /* animation:none; */
-    }
+    
+    
 }
 @media (max-width: 850px){
     .animate.home-img{
