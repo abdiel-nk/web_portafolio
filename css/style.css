@@ -647,7 +647,7 @@ span{
 .animate.scroll{
     transition:1s ease;
     transition-delay:calc(.3s / var(--i));
-    /* animation:none; */
+    animation:none;
 }
 section:nth-child(odd) .animate.scroll{
     background: var(--second-bg-color);
@@ -677,6 +677,7 @@ section:nth-child(odd) .animate.scroll{
 @media(min-width: 1200px){
     .project-box .project-content{
         height: 80vh;
+        margin-bottom: 4rem;
     }
     .skills .skills-row{
         justify-content: center;
