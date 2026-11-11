@@ -1,0 +1,33 @@
+---
+interface Props {
+  number: string;
+  title: string;
+  category: string;
+  description: string;
+  stack: string[];
+  href: string;
+  visual: string;
+  external?: boolean;
+}
+const { number, title, category, description, stack, href, visual, external = true } = Astro.props;
+---
+<article class="project-card reveal">
+  <a class="project-visual" href={href} target={external ? "_blank" : undefined} rel={external ? "noreferrer" : undefined} aria-label={"Open " + title}>
+    <div class={"project-art " + visual} aria-hidden="true">
+      <span class="art-window"><i></i><i></i><i></i></span>
+      <span class="art-lines"><i></i><i></i><i></i></span>
+      <span class="art-orbit"></span>
+      <span class="art-index">{number}</span>
+    </div>
+    <span class="project-open" aria-hidden="true">↗</span>
+  </a>
+  <div class="project-meta">
+    <span class="eyebrow">{category}</span>
+    <span class="project-number">{number} / 02</span>
+  </div>
+  <h3><a href={href} target={external ? "_blank" : undefined} rel={external ? "noreferrer" : undefined}>{title}</a></h3>
+  <p>{description}</p>
+  <ul class="tag-list" aria-label="Technologies">
+    {stack.map((item) => <li>{item}</li>)}
+  </ul>
+</article>
